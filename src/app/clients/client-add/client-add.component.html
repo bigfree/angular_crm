@@ -1,0 +1,113 @@
+<div class="overflow-container">
+	<div class="container">
+		<ngb-alert type="success" [dismissible]="false" *ngIf="response && response.ok">
+			{{ response.message }}
+		</ngb-alert>
+		<form [formGroup]="addClientForm" (ngSubmit)="onSubmit()">
+
+			<div class="card mb-4">
+				<div class="card-header">
+					<h5 class="mb-0">General information</h5>
+				</div>
+				<div class="card-body card-body__ad-client">
+					<label class="add-client__photo">
+						photo
+						<input type="file" class="add-client__photo-input">
+					</label>
+					<div class="add-client__content">
+						<div class="form-group">
+							<label>Name:</label>
+							<input type="text" formControlName="name" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label>Description</label>
+							<textarea class="form-control" rows="5" formControlName="description"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card mb-4">
+				<div class="card-header">
+					<h5 class="mb-0">Billing address</h5>
+				</div>
+				<div class="card-body">
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<label>Company name:</label>
+							<input type="text" formControlName="company" class="form-control">
+						</div>
+						<div class="form-group col-sm-6">
+							<label>City:</label>
+							<input type="text" formControlName="city" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-4">
+							<label>Street:</label>
+							<input type="text" formControlName="street" class="form-control">
+						</div>
+						<div class="form-group col-sm-4">
+							<label>ZIP:</label>
+							<input type="text" formControlName="psc" class="form-control">
+						</div>
+						<div class="form-group col-sm-4">
+							<label>Country:</label>
+							<input type="text" formControlName="country" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-4">
+							<label>Business ID:</label>
+							<input type="text" formControlName="ico" class="form-control">
+						</div>
+						<div class="form-group col-sm-4">
+							<label>Tax ID:</label>
+							<input type="text" formControlName="dic" class="form-control">
+						</div>
+						<div class="form-group col-sm-4">
+							<label>VAT reg. no.:</label>
+							<input type="text" formControlName="icdph" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card mb-4">
+				<div class="card-header">
+					<h5 class="mb-0">Postal address</h5>
+				</div>
+				<div class="card-body">
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<label>Company:</label>
+							<input type="text" formControlName="post_company" class="form-control">
+						</div>
+						<div class="form-group col-sm-6">
+							<label>Street:</label>
+							<input type="text" formControlName="post_street" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-4">
+							<label>City:</label>
+							<input type="text" formControlName="post_city" class="form-control">
+						</div>
+						<div class="form-group col-sm-4">
+							<label>ZIP:</label>
+							<input type="text" formControlName="post_psc" class="form-control">
+						</div>
+						<div class="form-group col-sm-4">
+							<label>Country:</label>
+							<input type="text" formControlName="post_country" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Crete new client</button>
+
+		</form>
+	</div>
+
+</div>

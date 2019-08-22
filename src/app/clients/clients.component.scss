@@ -1,0 +1,19 @@
+.client-list {
+	border: 1px solid #e3e3e3;
+}
+
+.client-item {
+	display: flex;
+	align-items: center;
+	height: 45px;
+	border-bottom: 1px solid #e3e3e3;
+
+	&:last-child {
+		border-bottom: 0;
+	}
+
+	.client-item__link {
+		flex: 1;
+		padding: 0 15px;
+	}
+}

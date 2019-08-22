@@ -1,0 +1,9 @@
+<app-header-section></app-header-section>
+
+<div class="container">
+	<div class="client-list">
+		<div class="client-item" *ngFor="let client of clientItems">
+			<a [routerLink]="['/clients', client.id]" class="client-item__link">{{ client.name }}</a>
+		</div>
+	</div>
+</div>

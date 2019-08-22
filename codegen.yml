@@ -1,0 +1,13 @@
+schema: http://localhost:8000/graphql
+overwrite: true
+documents: src/app/graphql/**/*.graphql
+generates:
+  ./src/app/generated/graphql.ts:
+    config:
+    #   noGraphqlTag: true
+      noNamespaces: true
+    plugins:
+      - typescript-common
+      - typescript-client
+      - typescript-server
+      - typescript-apollo-angular

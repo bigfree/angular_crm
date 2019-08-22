@@ -1,0 +1,40 @@
+.overflow-container {
+	height: calc(100vh - 56px);
+	margin-top: -25px;
+	padding: 25px 0;
+	overflow-y: auto;
+}
+
+.card-body__ad-client {
+	display: flex;
+	align-items: stretch;
+}
+
+/**
+ * Client photo
+ */
+.add-client__photo {
+	display: flex;
+	align-items: center; justify-content: center;
+	flex: 0 0 200px;
+	height: 200px;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	overflow: hidden;
+	position: relative;
+	margin: 0 25px 0 0;
+	cursor: pointer;
+
+	.add-client__photo-input {
+		visibility: hidden;
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+}
+
+/**
+ * Client content
+ */
+.add-client__content {
+	flex: 1;
+}

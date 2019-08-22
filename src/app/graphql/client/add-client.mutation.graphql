@@ -1,0 +1,9 @@
+mutation AddClient($input: ClientInput!) {
+	addClient(input: $input) {
+		ok
+		message
+		client {
+			...ClientParts
+		}
+	}
+}
